@@ -11,11 +11,12 @@ const Header=()=>{
         <Navbar.Brand href="#home">BongoChef</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto  ">
+          <Nav className="me-auto ">
            <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#blog">Blog</Nav.Link>
-            <Button variant="primary" className="d-flex justify-content-around">Login </Button>          
+                      
           </Nav>
+          <Button variant="primary" className="d-flex justify-content-end">Login </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
