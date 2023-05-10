@@ -7,6 +7,7 @@ import Banner from "../banner/Banner";
 // import Chefs from "../pages/Shared/chefData/Chefs";
 // import { Outlet } from "react-router-dom";
 import Chefs from "../pages/Shared/chefData/Chefs";
+import Rdiv from "../pages/Home/MomentRecipie/Rdiv";
 
 
 
@@ -20,8 +21,9 @@ const Main = () => {
                
                        <Header></Header>
                        <Banner></Banner>
-
                        <Chefs></Chefs>
+                       <Rdiv></Rdiv>
+                       {/* <Outlet></Outlet>  */}
                        
             </Container>
             // 

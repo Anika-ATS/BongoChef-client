@@ -19,7 +19,7 @@ import Chefs from "../pages/Shared/chefData/Chefs";
         {
             path:'/chefs',
             element:<Chefs></Chefs>,
-            // loader:({params})=>fetch(`http://localhost:5000/chefData/${params.id}`)
+           
 
         }
 
