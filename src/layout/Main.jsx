@@ -1,33 +1,32 @@
 // import React from 'react';
 import React from "react";
 import Header from "../pages/Shared/Header/Header";
-import Footer from "../pages/Shared/Footer/Footer";
+// import Footer from "../pages/Shared/Footer/Footer";
 import { Container,Row,Col } from "react-bootstrap";
 import Banner from "../banner/Banner";
+// import Chefs from "../pages/Shared/chefData/Chefs";
+// import { Outlet } from "react-router-dom";
+import Chefs from "../pages/Shared/chefData/Chefs";
+
+
 
 
 const Main = () => {
     return (
-        <div>
-            <Header></Header>
+        // <div>
+            
             
             <Container className="fluid">
-               <Row>
-                   <Col>
+               
+                       <Header></Header>
                        <Banner></Banner>
-                     
-                   </Col>
-               </Row>
-               <Row>
-                   <Col>
-                     <h1>chef info</h1>
-                   </Col>
-               </Row>
-                
+
+                       <Chefs></Chefs>
+                       
             </Container>
-            {/* <Footer></Footer> */}
+            // 
             
-        </div>
+        // </div>
     );
 };
 
