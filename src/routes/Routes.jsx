@@ -9,6 +9,7 @@ import Details from "../pages/Details/Details/Details";
 import LoginLayout from "../layout/LoginLayout";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 // import Main from "../layout/Main";
 
 // import Blog from "../pages/Shared/Blog/Blog";
@@ -59,7 +60,7 @@ import Register from "../pages/Login/Register/Register";
         children:[
             {
                 path:':id',
-                element:<Details></Details>,
+                element:<PrivateRoute><Details></Details></PrivateRoute>,
                 loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
 
             }

@@ -7,11 +7,14 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
-// import { CgProfile } from "react-icons/fa";
-// import {  } from "react-icons/fa";
-// import Blog from "../Blog/Blog";
+
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user,logOut } = useContext(AuthContext);
+  const handleLogOut=()=>{
+     logOut()
+     .then()
+     .catch(error=>console.log(error));
+    }
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -31,7 +34,7 @@ const Header = () => {
               <FaUserCircle style={{ fontSize: "2rem" }}></FaUserCircle></Link>
           </Nav.Link>}
           {user ?
-            <Button variant="secondary" className="d-flex justify-content-end text-decoration-none  link-dark ">Log Out </Button> :
+            <Button variant="secondary" className="d-flex justify-content-end text-decoration-none  link-dark " onClick={handleLogOut}>Log Out </Button> :
             <Link to="/login">
               <Button variant="secondary" className="text-decoration-none d-flex justify-content-end   link-dark">Login </Button>
             </Link>
