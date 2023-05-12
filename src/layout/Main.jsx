@@ -10,9 +10,6 @@ import Chefs from "../pages/Shared/chefData/Chefs";
 import Rdiv from "../pages/Home/MomentRecipie/Rdiv";
 import ChefCooking from "../pages/Home/MomentRecipie/ChefCooking";
 
-
-
-
 const Main = () => {
     return (
         // <div>
@@ -21,12 +18,14 @@ const Main = () => {
             <Container className="fluid">
                
                        <Header></Header>
+                       
                        <Banner></Banner>
                        <Chefs></Chefs>
                        <Rdiv></Rdiv>
                        <ChefCooking></ChefCooking>
+                     
 
-                       {/* <Outlet></Outlet>  */}
+                     
                        
             </Container>
             // 

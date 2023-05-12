@@ -8,7 +8,7 @@ const RecipeDetails = () => {
     const{id,recipe1,recipe2,recipe3,ingredients1,ingredients2,ingredients3,methodOfCokking1,methodOfCokking2,methodOfCokking3}=details;
     return (
         <div>
-            <h1 className='text-warning text-center'>Chefs All Recipes </h1>
+            
             <CardGroup className='mb-5'>
                 
                 <Card className='ms-3 '>
