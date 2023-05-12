@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import {FaGoogle,FaGithub} from "react-icons/fa";
 
 const Login = () => {
     return (
@@ -22,15 +23,19 @@ const Login = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" name='password' placeholder="Password" required />
                     </Form.Group>
-                    {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group> */}
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                       <Button variant="outline-primary mb-3"><FaGoogle className='me-2'></FaGoogle> Login-With-Google</Button>
+                       <br></br>
+                       <Button variant="outline-primary "><FaGithub className='me-2'></FaGithub>Login-With-GitHub</Button>
+                        
+                    </Form.Group>
+
                     <Button variant="primary" type="submit">
                         Login
                     </Button>
                     <br></br>
                     <Form.Text className="text-dark">
-                            Don't have an account? Please<Link to='/register'>Register</Link>
+                            Don't have an account? Please--<Link to='/register'>Register</Link>
                         </Form.Text>
                         <Form.Text className="text-success">
                             

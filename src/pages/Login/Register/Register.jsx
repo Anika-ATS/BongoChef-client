@@ -9,7 +9,7 @@ const Register = () => {
     return (
         <div>
             <Header></Header>
-            <Container className='w-60 mx-auto mt-5'>
+            <Container className='w-50 mx-auto mt-5'>
                 <Form className='bg-light'>
                     <p className='font-italic text-center text-dark font-weight-bold text-uppercase'>Register Here</p>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -27,15 +27,20 @@ const Register = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" name='password' placeholder="Password" required />
                     </Form.Group>
-                    <Form.Group className="mb-3" style={{width: "18rem"}}>
-                        <img src="..." className="card-img-top" alt="..."/>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label>Photo URL</Form.Label>
+                        <Form.Control type="password" name='photo' placeholder="Photo URL" required />
                     </Form.Group>
+                    
+                    {/* <Form.Group className="mb-3" style={{width: "18rem"}}>
+                        <img src="..." className="card-img-top" alt="..."/>
+                    </Form.Group> */}
                     <Button variant="primary" type="submit">
-                        Login
+                        Register
                     </Button>
                     <br></br>
                     <Form.Text className="text-dark">
-                            Don't have an account? Please<Link to='/register'>Register</Link>
+                            Allready have an account? Please go back to--<Link to='/login'>Login</Link>
                         </Form.Text>
                         <Form.Text className="text-success">
                             
