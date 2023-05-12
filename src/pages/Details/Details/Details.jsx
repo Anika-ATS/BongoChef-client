@@ -1,14 +1,16 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+
 import { useLoaderData } from 'react-router-dom';
+import RecipeDetails from '../RecipeDetails';
 
 const Details = () => {
     const details = useLoaderData();
     const{id,picture,name,description,likes,recipesNumber,experience}=details;
 
     return (
-        <div>
-           <Card >
+        <div className='mt-5 ms-5 col-10'>
+           <Card  className='mb-5'>
                 <div >
                   <Card.Img variant="top" className='object-fit-cover'  src={picture} />
                 </div>
@@ -24,6 +26,8 @@ const Details = () => {
                   
                 </Card.Body>
               </Card>
+              <RecipeDetails></RecipeDetails>
+            
         </div>
     );
 };
