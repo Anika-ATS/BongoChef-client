@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 
 const ChefsDisplay = (props) => {
@@ -23,7 +24,7 @@ const ChefsDisplay = (props) => {
                       <p>Number of recepies:{recipesNumber}</p>
                       <p>likes:{likes}</p>
                   </Card.Text>
-                  <Button variant="success">View Recepies</Button>
+                  <Button variant="primary" ><Link className="text-decoration-none link-light" to={`/details/${id}`}>View Recepies</Link></Button>
                 </Card.Body>
               </Card>
             

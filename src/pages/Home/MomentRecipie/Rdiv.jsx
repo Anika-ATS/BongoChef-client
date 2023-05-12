@@ -11,7 +11,7 @@ const Rdiv = () => {
     return (
         <div>
             <h1 className='text-danger text-center mb-3'>Reciepies</h1>
-            <Marquee speed={40} >
+            <Marquee speed={50} >
                 
 
                     <Card style={{ width: '18rem' }} className=' me-5'>

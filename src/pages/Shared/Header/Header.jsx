@@ -7,7 +7,7 @@ const Header=()=>{
     return(
         <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home" className="text-primary">BongoChef</Navbar.Brand>
+        <Navbar.Brand href="#home" className="text-dark">BongoChef</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto ">
@@ -15,7 +15,7 @@ const Header=()=>{
             <Nav.Link href="#blog">Blog</Nav.Link>
                       
           </Nav>
-          <Button variant="primary" className="d-flex justify-content-end">Login </Button>
+          <Button variant="secondary" className="d-flex justify-content-end">Login </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

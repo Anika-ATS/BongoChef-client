@@ -8,6 +8,7 @@ import Banner from "../banner/Banner";
 // import { Outlet } from "react-router-dom";
 import Chefs from "../pages/Shared/chefData/Chefs";
 import Rdiv from "../pages/Home/MomentRecipie/Rdiv";
+import ChefCooking from "../pages/Home/MomentRecipie/ChefCooking";
 
 
 
@@ -23,6 +24,8 @@ const Main = () => {
                        <Banner></Banner>
                        <Chefs></Chefs>
                        <Rdiv></Rdiv>
+                       <ChefCooking></ChefCooking>
+
                        {/* <Outlet></Outlet>  */}
                        
             </Container>
