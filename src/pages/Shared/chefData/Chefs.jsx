@@ -6,7 +6,7 @@ const Chefs = () => {
     
     const [chefData, setChefData]=useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/chefData")
+        fetch("https://bongo-chef-new-server.vercel.app/chefData")
             .then(res=>res.json())
             .then(data=>setChefData(data))
             .catch(error=>console.log(error))
