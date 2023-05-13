@@ -9,28 +9,24 @@ import Banner from "../banner/Banner";
 import Chefs from "../pages/Shared/chefData/Chefs";
 import Rdiv from "../pages/Home/MomentRecipie/Rdiv";
 import ChefCooking from "../pages/Home/MomentRecipie/ChefCooking";
+import Footer from "../pages/Shared/Footer/Footer";
 
 const Main = () => {
     return (
-        // <div>
-            
-            
-            <Container className="fluid">
-               
-                       <Header></Header>
+               <div>
+                <Header ></Header>
+                <Container className="mt-2 fluid">
+  
+                    <Banner></Banner>
+                    <Chefs></Chefs>
+                    <Rdiv></Rdiv>
+                    <ChefCooking></ChefCooking>
                        
-                       <Banner></Banner>
-                       <Chefs></Chefs>
-                       <Rdiv></Rdiv>
-                       <ChefCooking></ChefCooking>
                      
-
-                     
-                       
-            </Container>
-            // 
-            
-        // </div>
+                </Container>
+                <Footer></Footer>
+                </div>
+  
     );
 };
 

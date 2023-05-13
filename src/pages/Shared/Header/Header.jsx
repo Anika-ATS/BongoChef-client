@@ -25,8 +25,8 @@ const Header = () => {
             
               <Link to="/" className="text-decoration-none  link-dark">Home</Link>
             
-            
-              <Link to="" className="ms-3 text-decoration-none  link-dark" >Blog</Link>
+             
+              <Link to="blog" className="ms-3 text-decoration-none  link-dark" >Blog</Link>
            
           </Nav>
           {user && <Nav.Link href="#profile">
@@ -36,7 +36,7 @@ const Header = () => {
           {user ?
             <Button variant="secondary" className="d-flex justify-content-end text-decoration-none  link-dark " onClick={handleLogOut}>Log Out </Button> :
             <Link to="/login">
-              <Button variant="secondary" className="text-decoration-none d-flex justify-content-end   link-dark">Login </Button>
+              <Button variant="secondary" className="d-flex justify-content-end text-decoration-none  link-dark "  >Login </Button>
             </Link>
           }
 

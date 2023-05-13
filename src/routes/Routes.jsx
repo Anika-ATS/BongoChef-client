@@ -1,8 +1,7 @@
 import { Navigate, createBrowserRouter} from "react-router-dom";
 
 import  Main from "../layout/Main";
-// import Home from "../pages/Home/Home/home";
-// import Home from "../pages/Home/Home/Home";
+
 import Chefs from "../pages/Shared/chefData/Chefs";
 import ChefsDetailsLayout from "../layout/ChefsDetailsLayout";
 import Details from "../pages/Details/Details/Details";
@@ -10,9 +9,9 @@ import LoginLayout from "../layout/LoginLayout";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import PrivateRoute from "./PrivateRoute";
-// import Main from "../layout/Main";
+import BlogLayout from "../layout/BlogLayout";
+import Blog from "../pages/Login/Login/Blog";
 
-// import Blog from "../pages/Shared/Blog/Blog";
  const router= createBrowserRouter([ 
     {
         path:'/',
@@ -63,6 +62,17 @@ import PrivateRoute from "./PrivateRoute";
                 element:<PrivateRoute><Details></Details></PrivateRoute>,
                 loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`)
 
+            }
+           
+        ]
+    },
+    {
+        path:'blog',
+        element:<BlogLayout></BlogLayout>,
+        children:[
+            {
+                path:':id',
+                element:<Blog></Blog>
             }
            
         ]
