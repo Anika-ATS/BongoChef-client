@@ -9,7 +9,7 @@ import Footer from '../pages/Shared/Footer/Footer';
 const ChefsDetailsLayout = () => {
     return (
         <div>
-            <Container className="fluid">
+            <Container className="fluid mt-5">
                
                <Header></Header>
                <Outlet></Outlet> 

@@ -13,7 +13,7 @@ const Banner = () => {
             {/* <h1>Main Contano</h1> */}
             
             {/* <Marquee speed={60}> */}
-            <div className='w-full h-50'>
+            <div className='w-full h-50 mb-5'>
              <Container >
                 {/* bannar*/} 
                 

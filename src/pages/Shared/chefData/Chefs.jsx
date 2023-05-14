@@ -6,9 +6,11 @@ const Chefs = () => {
     
     const [chefData, setChefData]=useState([]);
     useEffect(()=>{
-        fetch("https://bongo-chef-new-server.vercel.app/chefData")
+        // fetch("http://localhost:5000/chefData")
+        fetch("https://bongo-chef-new-server-anika-ats.vercel.app/chefData")
             .then(res=>res.json())
             .then(data=>setChefData(data))
+            
             .catch(error=>console.log(error))
 
      },[])
@@ -17,6 +19,7 @@ const Chefs = () => {
         <div>
 
             <Container className='row mb-4'>
+                <h1 className='text-danger text-center fs-3 '>Our Chefs</h1>
                
                {
                   chefData.map(chefs=><ChefsDisplay

@@ -26,7 +26,7 @@ const Header = () => {
               <Link to="/" className="text-decoration-none  link-dark">Home</Link>
             
              
-              <Link to="blog" className="ms-3 text-decoration-none  link-dark" >Blog</Link>
+              <Link to="/blog" className="ms-3 text-decoration-none  link-dark" >Blog</Link>
            
           </Nav>
           {user && <Nav.Link href="#profile">
