@@ -11,6 +11,7 @@ import Register from "../pages/Login/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import BlogLayout from "../layout/BlogLayout";
 import Blog from "../pages/Login/Login/Blog";
+import NotFoundPage from "../pages/Shared/NotFoundPage";
 
  const router= createBrowserRouter([ 
     {
@@ -77,6 +78,12 @@ import Blog from "../pages/Login/Login/Blog";
             }
            
         ]
+    },
+    // 404 page
+    {
+        path:'*',
+        element:<NotFoundPage></NotFoundPage>
+
     }
    
     

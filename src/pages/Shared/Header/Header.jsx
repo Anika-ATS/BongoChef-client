@@ -1,4 +1,4 @@
-import React from "react";
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -29,12 +29,14 @@ const Header = () => {
               <Link to="/blog" className="ms-3 text-decoration-none  link-dark" >Blog</Link>
            
           </Nav>
-          {user && <Nav.Link href="#profile">
+          {user?.email?<> <Nav.Link href="#profile">
             <Link to="" className="text-decoration-none  link-dark me-2" >
-              <FaUserCircle style={{ fontSize: "2rem" }}></FaUserCircle></Link>
-          </Nav.Link>}
-          {user ?
-            <Button variant="secondary" className="d-flex justify-content-end text-decoration-none  link-dark " onClick={handleLogOut}>Log Out </Button> :
+              <FaUserCircle style={{ fontSize: "2rem" }}>{user?.image}</FaUserCircle></Link>
+              <span className='text-fuchsia-950 font-bold'>{user?.displayName}</span>
+          </Nav.Link>
+          
+            <Button variant="secondary" className="d-flex justify-content-end text-decoration-none  link-dark " onClick={handleLogOut}>Log Out </Button> 
+            </>:
             <Link to="/login">
               <Button variant="secondary" className="d-flex justify-content-end text-decoration-none  link-dark "  >Login </Button>
             </Link>

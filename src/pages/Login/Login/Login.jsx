@@ -4,12 +4,13 @@ import { Container } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import {FaGoogle,FaGithub} from "react-icons/fa";
+import {FaGithub} from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import SocialLogin from '../../Shared/SocialLogin';
 
 const Login = () => {
-    const {SignInUser}=useContext(AuthContext);
+    const {SignInUser, githubSignIn}=useContext(AuthContext);
     const navigate=useNavigate();
     const location=useLocation();
     console.log('bye',location);
@@ -37,6 +38,17 @@ const Login = () => {
             })
        }
 
+     // github
+    const handleGithubSignIn=()=>{
+        githubSignIn ()
+        .then(result => {
+            const loggedInUser = result.user;
+            console.log(loggedInUser);
+            navigate(from, { replace: true });
+        })
+
+    }
+
 
 
 
@@ -56,16 +68,21 @@ const Login = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" name='password' placeholder="Password" required />
                     </Form.Group>
+                    <Button className='mb-2' variant="primary" type="submit">
+                        Login
+                    </Button>
+                    <p className="mx-auto text-fuchsia-950 font-bold mb-3">Social Sign in</p>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                       <Button variant="outline-primary mb-3"><FaGoogle className='me-2'></FaGoogle> Login-With-Google</Button>
-                       <br></br>
-                       <Button variant="outline-primary "><FaGithub className='me-2'></FaGithub>Login-With-GitHub</Button>
+                    <button onClick={handleGithubSignIn} className="btn btn-outline btn-primary ">
+                    <FaGithub></FaGithub>
+                    </button>
+
+                       {/* ggl and github signin */}
+                       <SocialLogin></SocialLogin>
                         
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
-                        Login
-                    </Button>
+                    
                     <br></br>
                     <Form.Text className="text-dark">
                             Don't have an account? Please--<Link to='/register'>Register</Link>

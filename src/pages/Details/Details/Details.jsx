@@ -12,7 +12,7 @@ const Details = () => {
         <div className='mt-5 ms-5 col-10'>
           
            <Card  className='mb-5'>
-              <h1 className='text-danger text-center fs-3'>All Chefs</h1>
+              
                 <div >
                   <Card.Img variant="top" className='object-fit-cover'  src={picture} />
                 </div>
