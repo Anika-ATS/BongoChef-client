@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
-import './../../Home/Home/Activelink';
+// import './../../Home/Home/Activelink';
 const Header = () => {
   const { user,logOut } = useContext(AuthContext);
   const handleLogOut=()=>{
