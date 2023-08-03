@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
 
+import Activelink from '../../Home/Home/Activelink/Activelink';
 const Header = () => {
   const { user,logOut } = useContext(AuthContext);
   const handleLogOut=()=>{
@@ -23,23 +24,23 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto ">
             
-              <Link to="/" className="text-decoration-none  link-dark">Home</Link>
+            <Activelink to="/" className="text-decoration-none  link-dark">Home</Activelink>
             
              
-              <Link to="/blog" className="ms-3 text-decoration-none  link-dark" >Blog</Link>
+              <Activelink to="/blog" className="ms-3 text-decoration-none  link-dark" >Blog</Activelink>
            
           </Nav>
           {user?.email?<> <Nav.Link href="#profile">
-            <Link to="" className="text-decoration-none  link-dark me-2" >
-              <FaUserCircle style={{ fontSize: "2rem" }}>{user?.image}</FaUserCircle></Link>
+            <Activelink to="" className="text-decoration-none  link-dark me-2" >
+              <FaUserCircle style={{ fontSize: "2rem" }}>{user?.image}</FaUserCircle></Activelink>
               <span className='text-fuchsia-950 font-bold'>{user?.displayName}</span>
           </Nav.Link>
           
             <Button variant="success" className="d-flex justify-content-end text-decoration-none  " onClick={handleLogOut}>Log Out </Button> 
             </>:
-            <Link to="/login">
+            <Activelink to="/login">
               <Button variant="success" className="d-flex justify-content-end text-decoration-none  "  >Login </Button>
-            </Link>
+            </Activelink>
           }
 
         </Navbar.Collapse>

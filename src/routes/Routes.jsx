@@ -28,6 +28,8 @@ import NotFoundPage from "../pages/Shared/NotFoundPage";
                 element:<Login></Login>,
 
             },
+         
+           
             {
 
                 path:'register',
