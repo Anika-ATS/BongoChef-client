@@ -35,10 +35,10 @@ const Header = () => {
               <span className='text-fuchsia-950 font-bold'>{user?.displayName}</span>
           </Nav.Link>
           
-            <Button variant="secondary" className="d-flex justify-content-end text-decoration-none  link-dark " onClick={handleLogOut}>Log Out </Button> 
+            <Button variant="success" className="d-flex justify-content-end text-decoration-none  " onClick={handleLogOut}>Log Out </Button> 
             </>:
             <Link to="/login">
-              <Button variant="secondary" className="d-flex justify-content-end text-decoration-none  link-dark "  >Login </Button>
+              <Button variant="success" className="d-flex justify-content-end text-decoration-none  "  >Login </Button>
             </Link>
           }
 

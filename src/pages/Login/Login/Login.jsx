@@ -4,7 +4,8 @@ import { Container } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import {FaGithub} from "react-icons/fa";
+// import {FaGithub} from "react-icons/fa";
+import {FaGoogle} from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import SocialLogin from '../../Shared/SocialLogin';
@@ -74,7 +75,7 @@ const Login = () => {
                     <p className="mx-auto text-fuchsia-950 font-bold mb-3">Social Sign in</p>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <button onClick={handleGithubSignIn} className="btn btn-outline btn-primary ">
-                    <FaGithub></FaGithub>
+                    <FaGoogle></FaGoogle>
                     </button>
 
                        {/* ggl and github signin */}

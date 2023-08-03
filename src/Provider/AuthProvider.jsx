@@ -11,6 +11,7 @@ const auth = getAuth(app)
 
 
 const AuthProvider = ({children}) => {
+    console.log(children);
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
