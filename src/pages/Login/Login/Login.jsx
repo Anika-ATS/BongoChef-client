@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import {FaGithub} from "react-icons/fa";
+
 import {FaGoogle} from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
@@ -73,15 +73,20 @@ const Login = () => {
                         Login
                     </Button>
                     <p className="mx-auto text-fuchsia-950 font-bold mb-3">Social Sign in</p>
+                      
+                    <div className='grid grid-cols-2'>
+                   
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <button onClick={handleGithubSignIn} className="btn btn-outline btn-primary ">
                     <FaGoogle></FaGoogle>
                     </button>
+                    <SocialLogin></SocialLogin>
 
                        {/* ggl and github signin */}
-                       <SocialLogin></SocialLogin>
+                     
                         
                     </Form.Group>
+                    </div>
 
                     
                     <br></br>

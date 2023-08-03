@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { FaGoogle } from "react-icons/fa";
+// import { FaGoogle } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import {FaGithub} from "react-icons/fa";
 
 const SocialLogin = () => {
     const{googlepSignIn}=useContext(AuthContext);
@@ -26,11 +27,11 @@ const SocialLogin = () => {
         <div>
             <div className="flex flex-col w-full border-opacity-50">
                 
-                <div className="divider"></div>
-                <p className="mx-auto text-fuchsia-950 font-bold mb-3">Social Sign in2</p>
+                {/* <div className="divider"></div> */}
+                {/* <p className="mx-auto text-fuchsia-950 font-bold mb-3">Social Sign in2</p> */}
                 <div className="mx-auto">
-                    <button onClick={handleGoogleSignIn} className="btn btn-outline btn-primary ">
-                    <FaGoogle></FaGoogle>
+                    <button onClick={handleGoogleSignIn} className="mt-2 btn btn-outline btn-primary ">
+                    <FaGithub></FaGithub>
                     </button></div>
                 
             </div>
